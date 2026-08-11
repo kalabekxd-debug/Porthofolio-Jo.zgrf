@@ -706,3 +706,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
     transform: none;
   }
 }
+/* =========================================================
+   LOADER — 3 SECOND VERSION
+   ========================================================= */
+
+.loader__line i {
+  animation-duration: 3s;
+}
