@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Jo — visual portfolio / web / motion direction.">
+  <title>JO / ZGRF — VISUAL SYSTEM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;600;700&family=Big+Shoulders+Display:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor cursor-dot" aria-hidden="true"></div>
+  <div class="cursor cursor-ring" aria-hidden="true"></div>
+
+  <div class="loader" aria-hidden="true">
+    <div class="loader__meta"><span>JO / ZGRF</span><span>VISUAL SYSTEM 01</span></div>
+    <div class="loader__word">ENTER<span>ING</span></div>
+    <div class="loader__line"><i></i></div>
+  </div>
+
+  <header class="nav">
+    <a class="brand magnetic" href="#top" aria-label="Back to top">J<span>O</span>®</a>
+    <nav class="nav__links" aria-label="Primary navigation">
+      <a class="nav-link magnetic" href="#work">WORK</a>
+      <a class="nav-link magnetic" href="#about">ABOUT</a>
+      <a class="nav-link magnetic" href="#contact">CONTACT</a>
+    </nav>
+    <a class="status magnetic" href="https://www.instagram.com/jo.zgrf/" target="_blank" rel="noreferrer">
+      <i></i> IG / JO.ZGRF
+    </a>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <canvas id="grid-canvas" aria-hidden="true"></canvas>
+      <div class="hero__top reveal">
+        <span>PORTFOLIO / 2026</span>
+        <span>INDONESIA — DIGITAL SPACE</span>
+      </div>
+
+      <div class="hero__title">
+        <div class="title-line reveal" style="--delay:.05s"><span>JO</span><em>/</em></div>
+        <div class="title-line title-line--outline reveal" style="--delay:.12s"><span>VISUAL</span></div>
+        <div class="title-line title-line--shift reveal" style="--delay:.19s"><span>NOISE</span><b>↗</b></div>
+      </div>
+
+      <div class="hero__portrait image-reveal" data-tilt>
+        <div class="hero__portrait-frame">
+          <img src="assets/portrait.webp" alt="Portrait photograph used as the portfolio profile image" fetchpriority="high">
+          <div class="scanline"></div>
+          <span class="image-tag">PROFILE / 01</span>
+        </div>
+      </div>
+
+      <div class="hero__copy reveal">
+        <p>Visual portfolio built around <strong>image, typography, motion</strong> and a little controlled chaos.</p>
+        <a class="circle-cta magnetic" href="#work" aria-label="Explore selected work">
+          <span>EXPLORE</span><b>↓</b>
+        </a>
+      </div>
+
+      <div class="hero__side hero__side--left">SCROLL / SCAN / REPEAT</div>
+      <div class="hero__side hero__side--right">01 — 04</div>
+    </section>
+
+    <section class="manifesto section" id="about">
+      <div class="section-kicker reveal"><span>02</span><span>MANIFESTO</span></div>
+      <div class="manifesto__grid">
+        <h2 class="display reveal">MAKE IT<br><i>FEEL</i><br>ALIVE.</h2>
+        <div class="manifesto__text reveal">
+          <p class="large">A portfolio should not feel like a folder. It should feel like a point of view.</p>
+          <p>This direction takes the raw, high-contrast energy from the references you supplied and turns it into an interactive editorial system: oversized type, broken grids, tactile image treatment, red signal accents and motion that reacts to the pointer.</p>
+          <div class="facts">
+            <div><span>01</span><b>IMAGE</b><small>Portrait + visual study</small></div>
+            <div><span>02</span><b>TYPE</b><small>Oversized kinetic headlines</small></div>
+            <div><span>03</span><b>MOTION</b><small>Pointer / scroll / reveal</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work section" id="work">
+      <div class="section-kicker reveal"><span>03</span><span>SELECTED / VISUAL STUDIES</span></div>
+
+      <article class="project project--hero reveal">
+        <div class="project__media image-reveal" data-tilt>
+          <img src="assets/visual-study.webp" alt="Dark red and black visual artwork with a seated figure">
+          <div class="project__cursor-label">OPEN STUDY ↗</div>
+        </div>
+        <div class="project__info">
+          <div class="project__number">01</div>
+          <h3>RED<br><span>STATIC</span></h3>
+          <p>Visual direction / texture / portrait composition</p>
+          <span class="project__year">2026</span>
+        </div>
+      </article>
+
+      <div class="project-grid">
+        <article class="project project--portrait reveal">
+          <div class="project__media image-reveal" data-tilt>
+            <img src="assets/portrait.webp" alt="Portrait photograph on a rooftop at golden hour" loading="lazy">
+            <div class="project__cursor-label">VIEW ↗</div>
+          </div>
+          <div class="project__info">
+            <div class="project__number">02</div>
+            <h3>ROOFTOP<br><span>PORTRAIT</span></h3>
+            <p>Photography / identity / atmosphere</p>
+          </div>
+        </article>
+
+        <article class="statement-card reveal">
+          <span>THE RULE</span>
+          <strong>BREAK<br>THE<br>GRID.</strong>
+          <small>KEEP THE<br>MESSAGE.</small>
+        </article>
+      </div>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+          <span>IMAGE</span><b>✦</b><span>TYPE</span><b>✦</b><span>MOTION</span><b>✦</b><span>WEB</span><b>✦</b>
+          <span>IMAGE</span><b>✦</b><span>TYPE</span><b>✦</b><span>MOTION</span><b>✦</b><span>WEB</span><b>✦</b>
+        </div>
+      </div>
+    </section>
+
+    <section class="capabilities section">
+      <div class="section-kicker reveal"><span>04</span><span>CAPABILITIES / DIRECTION</span></div>
+      <div class="capability-list">
+        <a href="#contact" class="capability reveal magnetic">
+          <span>01</span><h3>VISUAL<br>DIRECTION</h3><i>↗</i>
+        </a>
+        <a href="#contact" class="capability reveal magnetic">
+          <span>02</span><h3>WEB<br>EXPERIENCE</h3><i>↗</i>
+        </a>
+        <a href="#contact" class="capability reveal magnetic">
+          <span>03</span><h3>MOTION<br>INTERACTION</h3><i>↗</i>
+        </a>
+        <a href="#contact" class="capability reveal magnetic">
+          <span>04</span><h3>IMAGE<br>STORYTELLING</h3><i>↗</i>
+        </a>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="contact__top reveal"><span>05 / CONTACT</span><span>LET'S MAKE SOMETHING LOUD.</span></div>
+      <div class="contact__title">
+        <div class="reveal">HAVE A</div>
+        <div class="reveal title-outline">PROJECT?</div>
+        <div class="reveal contact__arrow">↘</div>
+      </div>
+      <div class="contact__bottom reveal">
+        <p>For collaborations, visual experiments, web builds or anything that needs a stronger point of view.</p>
+        <a class="big-button magnetic" href="https://www.instagram.com/jo.zgrf/" target="_blank" rel="noreferrer">
+          <span>DM / JO.ZGRF</span><i>↗</i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>JO / ZGRF</span>
+    <span>BUILT WITH HTML + CSS + JS</span>
+    <a href="#top" class="magnetic">BACK TO TOP ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
