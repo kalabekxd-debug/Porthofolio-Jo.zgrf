@@ -215,3 +215,89 @@ button, a { -webkit-tap-highlight-color: transparent; }
   *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
   .reveal, .image-reveal { opacity:1; transform:none; }
 }
+/* =========================================================
+   JO / ZGRF — RED STATIC FULL IMAGE FIX
+   Paste this at the VERY BOTTOM of style.css
+   ========================================================= */
+
+
+/* ---------- RED STATIC IMAGE ---------- */
+
+.project--hero .project__media {
+  background: #050505;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.project--hero .project__media img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-width: 100%;
+  max-height: 78vh;
+
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
+
+  filter:
+    brightness(.92)
+    contrast(1.05)
+    saturate(.9);
+
+  transition:
+    transform .9s var(--ease),
+    filter .7s var(--ease);
+}
+
+
+/* ---------- RED STATIC HOVER ---------- */
+
+.project--hero .project__media:hover img {
+  transform: scale(1.02);
+
+  filter:
+    brightness(1)
+    contrast(1.05)
+    saturate(1);
+}
+
+
+/* ---------- RED STATIC MOBILE ---------- */
+
+@media (max-width: 900px) {
+
+  .project--hero .project__media {
+    padding: 10px;
+    min-height: auto;
+  }
+
+  .project--hero .project__media img {
+    width: 100%;
+    height: auto;
+
+    max-height: none;
+
+    aspect-ratio: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+
+/* ---------- RED STATIC REDUCED MOTION ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .project--hero .project__media img {
+    transition: none;
+  }
+
+  .project--hero .project__media:hover img {
+    transform: none;
+  }
+}
