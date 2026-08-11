@@ -10,7 +10,7 @@
       loader.style.transition = 'transform .75s cubic-bezier(.2,0,0,1)';
       loader.style.transform = 'translateY(-100%)';
       setTimeout(() => loader.remove(), 800);
-    }, reduce ? 0 : 850);
+    }, reduce ? 0 : 3000);
   });
 
   // Scroll reveal with small, controlled staggering.
