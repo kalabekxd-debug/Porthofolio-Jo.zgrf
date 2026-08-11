@@ -302,337 +302,263 @@ button, a { -webkit-tap-highlight-color: transparent; }
   }
 }
 /* =========================================================
-   JO / ZGRF — VISUAL POLISH v2
-   01 Typography
-   02 Spacing
-   03 Medieval / Heraldic Atmosphere
-   04 Dither + Ambient Gradient
-   ========================================================= */
-
-
-/* =========================================================
-   01 — SHARPER / CLEANER DISPLAY TYPE
-   ========================================================= */
-
-.title-line,
-.display,
-.project__info h3,
-.contact__title,
-.statement-card strong,
-.capability h3,
-.loader__word {
-  text-rendering: geometricPrecision;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-
-/* Main hero typography */
-
-.title-line {
-  letter-spacing: -0.045em;
-  line-height: 0.76;
-  transform: translateZ(0);
-}
-
-
-/* Outline text */
-
-.title-line--outline {
-  -webkit-text-stroke: 1px rgba(242, 240, 234, .9);
-  text-rendering: geometricPrecision;
-}
-
-
-/* Shifted line */
-
-.title-line--shift {
-  gap: 2.8vw;
-}
-
-
-/* Mono accent */
-
-.title-line--shift b {
-  letter-spacing: .025em;
-}
-
-
-/* Other large typography */
-
-.display {
-  letter-spacing: -0.045em;
-  line-height: .76;
-}
-
-.project__info h3 {
-  letter-spacing: -0.04em;
-  line-height: .76;
-}
-
-.contact__title {
-  letter-spacing: -0.045em;
-  line-height: .75;
-}
-
-.statement-card strong {
-  letter-spacing: -0.045em;
-}
-
-.capability h3 {
-  letter-spacing: -0.025em;
-}
-
-
-/* =========================================================
-   02 — MORE BREATHING ROOM
+   JO / ZGRF — CRUSADER / CHRISTIAN HERALDIC ATMOSPHERE
    ========================================================= */
 
 .hero {
-  column-gap: 34px;
-}
-
-.hero__title {
-  padding-right: 3vw;
-}
-
-.title-line--outline {
-  margin-left: 10vw;
-}
-
-.title-line--shift {
-  margin-left: 20vw;
-}
-
-
-/* Keep smaller text readable */
-
-.hero__copy {
-  max-width: 300px;
-}
-
-.hero__copy p {
-  line-height: 1.85;
-}
-
-.manifesto__text p {
-  line-height: 1.9;
-}
-
-.project__info p {
-  line-height: 1.75;
-}
-
-
-/* =========================================================
-   03 — HERALDIC / MEDIEVAL ATMOSPHERE
-   ========================================================= */
-
-/*
-   Very subtle geometric cross + circular seal.
-   Pure CSS — no extra image required.
-*/
-
-.hero::before {
-  content: "";
-  position: absolute;
-
-  width: min(42vw, 620px);
-  height: min(42vw, 620px);
-
-  left: 50%;
-  top: 50%;
-
-  transform: translate(-50%, -50%);
-
-  border: 1px solid rgba(226, 23, 36, .11);
-  border-radius: 50%;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent 47%,
-      rgba(226, 23, 36, .07) 47%,
-      rgba(226, 23, 36, .07) 53%,
-      transparent 53%
-    ),
-    linear-gradient(
-      0deg,
-      transparent 47%,
-      rgba(226, 23, 36, .07) 47%,
-      rgba(226, 23, 36, .07) 53%,
-      transparent 53%
-    );
-
-  opacity: .75;
-  pointer-events: none;
-  z-index: 0;
-}
-
-
-/* Inner heraldic ring */
-
-.hero::after {
-  content: "";
-
-  position: absolute;
-
-  width: min(27vw, 400px);
-  height: min(27vw, 400px);
-
-  left: 50%;
-  top: 50%;
-
-  transform: translate(-50%, -50%);
-
-  border: 1px solid rgba(242, 240, 234, .055);
-  border-radius: 50%;
-
-  box-shadow:
-    0 0 0 28px rgba(226, 23, 36, .018),
-    0 0 0 56px rgba(242, 240, 234, .012);
-
-  pointer-events: none;
-  z-index: 0;
-}
-
-
-/* =========================================================
-   04 — DITHER / HALFTONE ATMOSPHERE
-   ========================================================= */
-
-.hero {
+  position: relative;
   isolation: isolate;
 
   background:
     radial-gradient(
-      circle at 48% 45%,
-      rgba(226, 23, 36, .11),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 85% 10%,
-      rgba(124, 14, 21, .16),
-      transparent 32%
+      circle at 50% 45%,
+      rgba(130, 12, 20, .18) 0%,
+      rgba(130, 12, 20, .08) 22%,
+      transparent 48%
     ),
     radial-gradient(
       circle at 12% 85%,
-      rgba(242, 240, 234, .025),
-      transparent 28%
-    );
-}
-
-
-/* Fine dither field */
-
-.hero > #grid-canvas {
-  opacity: .28;
-}
-
-
-/* Dither layer */
-
-.hero .hero__title::before {
-  content: "";
-
-  position: absolute;
-
-  inset: -25% -10%;
-
-  pointer-events: none;
-
-  opacity: .055;
-
-  background-image:
+      rgba(210, 190, 150, .035),
+      transparent 30%
+    ),
     radial-gradient(
-      rgba(242, 240, 234, .8) .65px,
-      transparent .65px
+      circle at 90% 10%,
+      rgba(120, 10, 18, .12),
+      transparent 34%
     );
-
-  background-size: 5px 5px;
-
-  mask-image:
-    radial-gradient(
-      ellipse at center,
-      black 0%,
-      transparent 70%
-    );
-
-  z-index: -1;
-}
-
-
-/* Dark vignette */
-
-.hero {
-  box-shadow:
-    inset 0 0 180px rgba(0, 0, 0, .45);
 }
 
 
 /* =========================================================
-   MEDIEVAL SEAL DETAIL
+   CENTRAL HERALDIC SEAL
    ========================================================= */
 
-.hero__top::after {
-  content: "✦  ·  ✚  ·  ✦";
+.hero::before {
+  content: "✠";
 
   position: absolute;
 
   left: 50%;
   top: 50%;
 
+  width: min(34vw, 520px);
+  height: min(34vw, 520px);
+
   transform: translate(-50%, -50%);
-
-  color: rgba(226, 23, 36, .24);
-
-  font-size: 8px;
-  letter-spacing: .7em;
-
-  pointer-events: none;
-}
-
-
-/* =========================================================
-   RED STATIC — KEEP FULL IMAGE
-   ========================================================= */
-
-.project--hero .project__media {
-  background: #050505;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  overflow: hidden;
+  border:
+    1px solid rgba(190, 170, 130, .16);
+
+  border-radius: 50%;
+
+  color: rgba(190, 170, 130, .12);
+
+  font-family: serif;
+  font-size: clamp(70px, 9vw, 150px);
+
+  text-shadow:
+    0 0 30px rgba(140, 15, 20, .12);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(130, 12, 20, .055),
+      transparent 62%
+    );
+
+  box-shadow:
+    0 0 0 18px rgba(190, 170, 130, .018),
+    0 0 0 36px rgba(190, 170, 130, .012),
+    inset 0 0 50px rgba(120, 10, 18, .08);
+
+  pointer-events: none;
+
+  z-index: -1;
+
+  animation:
+    heraldicBreath 8s ease-in-out infinite;
 }
 
-.project--hero .project__media img {
+
+/* =========================================================
+   INNER CROSS
+   ========================================================= */
+
+.hero::after {
+  content: "✚";
+
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  color: rgba(220, 205, 170, .055);
+
+  font-family: serif;
+
+  font-size: clamp(180px, 25vw, 420px);
+
+  line-height: 1;
+
+  pointer-events: none;
+
+  z-index: -1;
+
+  filter:
+    blur(.15px)
+    drop-shadow(
+      0 0 22px rgba(120, 10, 18, .08)
+    );
+}
+
+
+/* =========================================================
+   MEDIEVAL CORNER ORNAMENTS
+   ========================================================= */
+
+.hero__top::before,
+.hero__top::after {
+  position: absolute;
+
+  color: rgba(190, 170, 130, .25);
+
+  font-family: serif;
+
+  font-size: 13px;
+
+  letter-spacing: .2em;
+
+  pointer-events: none;
+}
+
+.hero__top::before {
+  content: "✠  I";
+
+  left: 0;
+  top: 0;
+}
+
+.hero__top::after {
+  content: "IV  ✠";
+
+  right: 0;
+  top: 0;
+}
+
+
+/* =========================================================
+   MEDIEVAL MICRO TYPOGRAPHY
+   ========================================================= */
+
+.hero__copy::before {
+  content:
+    "IN HOC SIGNO VINCES";
+
   display: block;
 
-  width: 100%;
-  height: auto;
+  margin-bottom: 14px;
 
-  max-width: 100%;
-  max-height: 78vh;
+  color:
+    rgba(190, 170, 130, .42);
 
-  aspect-ratio: auto;
-  object-fit: contain;
-  object-position: center;
+  font-family:
+    "IBM Plex Mono",
+    monospace;
 
-  filter:
-    brightness(.92)
-    contrast(1.05)
-    saturate(.9);
+  font-size: 7px;
+
+  letter-spacing: .24em;
+
+  text-transform: uppercase;
 }
 
-.project--hero .project__media:hover img {
-  transform: scale(1.02);
 
-  filter:
-    brightness(1)
-    contrast(1.05)
-    saturate(1);
+/* =========================================================
+   DITHER / OLD PRINT TEXTURE
+   ========================================================= */
+
+.hero::marker {
+  display: none;
+}
+
+.hero {
+  background-image:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(130, 12, 20, .15),
+      transparent 46%
+    ),
+    radial-gradient(
+      rgba(210, 195, 165, .055) .6px,
+      transparent .6px
+    );
+
+  background-size:
+    auto,
+    5px 5px;
+}
+
+
+/* =========================================================
+   HERALDIC OUTER RINGS
+   ========================================================= */
+
+.hero__title {
+  position: relative;
+}
+
+.hero__title::after {
+  content: "";
+
+  position: absolute;
+
+  width: min(42vw, 640px);
+  height: min(42vw, 640px);
+
+  left: 50%;
+  top: 50%;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(45deg);
+
+  border:
+    1px solid rgba(190, 170, 130, .035);
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+
+/* =========================================================
+   SLOW HERALDIC MOTION
+   ========================================================= */
+
+@keyframes heraldicBreath {
+
+  0%,
+  100% {
+    transform:
+      translate(-50%, -50%)
+      scale(.985);
+
+    opacity: .72;
+  }
+
+  50% {
+    transform:
+      translate(-50%, -50%)
+      scale(1.015);
+
+    opacity: 1;
+  }
 }
 
 
@@ -642,51 +568,22 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 @media (max-width: 900px) {
 
-  .title-line {
-    letter-spacing: -0.035em;
-    line-height: .78;
-  }
-
-  .title-line--outline {
-    margin-left: 5vw;
-  }
-
-  .title-line--shift {
-    margin-left: 12vw;
-    gap: 4vw;
-  }
-
-  .hero {
-    column-gap: 0;
-  }
-
   .hero::before {
-    width: 90vw;
-    height: 90vw;
+    width: 72vw;
+    height: 72vw;
   }
 
   .hero::after {
-    width: 60vw;
-    height: 60vw;
+    font-size: 42vw;
   }
 
-  .hero .hero__title::before {
-    inset: -10%;
-    background-size: 4px 4px;
+  .hero__title::after {
+    width: 78vw;
+    height: 78vw;
   }
 
-  .project--hero .project__media {
-    padding: 10px;
-    min-height: auto;
-  }
-
-  .project--hero .project__media img {
-    width: 100%;
-    height: auto;
-    max-height: none;
-
-    aspect-ratio: auto;
-    object-fit: contain;
+  .hero__copy::before {
+    font-size: 6px;
   }
 }
 
@@ -697,13 +594,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 @media (prefers-reduced-motion: reduce) {
 
-  .hero::before,
-  .hero::after {
-    transform: translate(-50%, -50%);
-  }
-
-  .project--hero .project__media:hover img {
-    transform: none;
+  .hero::before {
+    animation: none;
   }
 }
 /* =========================================================
